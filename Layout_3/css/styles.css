@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    background: #4169e1;
+    color: #fffafa;
+    display: flex;
+    margin: 3px;
+}
+
+header {
+    flex: 1 1 100vw;
+    height: 100px;
+}
+
+nav {
+    flex: 1 1 100vw;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 5%;
+    font-size: 20pt;
+}
+
+main {
+    flex: 20 1 500px;
+    /* Função que calcula a altura do elemento, subtraindo 100% da altura vertical, menos a altura da header, menos a altura da footer, menos a soma das margin aplicadas nos elementos
+    header = 100px
+    footer = 100px
+    margin ((3 px+3 px)*4) =24 px
+    Total = 224 px
+     */
+    height: calc(100vh - 330px);
+}
+
+aside {
+    flex: 1 1 200px;
+}
+
+footer {
+    flex: 1 1 100vw;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #fffafa;
+}
+
+@media only screen and (max-width: 923px) {
+    main {
+        height: calc(100vh - 436px);
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 100px;
+    }
+}
+
