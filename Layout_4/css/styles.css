@@ -23,16 +23,20 @@ footer {
 }
 
 header {
-    flex: 1 1 100vw;
     height: 100px;
+    flex: 1 1 100vw;
 }
 
 header #logo {
+    display: flex;
     flex: 0 1 200px;
-    background: #054f77;
+    background: #0c3a56 ;
+    justify-content: center;
+    align-items: center;
 }
 
-#openMenu, #closeMenu {
+#openMenu,
+#closeMenu {
     border: none;
     background: none;
     font-size: 30px;
@@ -44,25 +48,25 @@ header #logo {
 }
 
 nav {
-    flex: 1 1 100vw;
     justify-content: flex-end;
     align-items: center;
+    flex: 1 1 200px;
 }
 
 nav a {
-    margin: 3%;
-    font-size: 20pt;
+    margin: 0 3%;
+    font-size: 15pt;
 }
 
 main {
-    flex: 20 1 500px;
-    /* Função que calcula a altura do elemento, subtraindo 100% da altura vertical, menos a altura da header, menos a altura da footer, menos a soma das margin aplicadas nos elementos
+     /* Função que calcula a altura do elemento, subtraindo 100% da altura vertical, menos a altura da header, menos a altura da footer, menos a soma das margin aplicadas nos elementos
     header = 100px
     footer = 100px
     margin ((3 px+3 px)*4) =24 px
     Total = 224 px
      */
     height: calc(100vh - 224px);
+    flex: 20 1 500px;
 }
 
 aside {
@@ -70,8 +74,8 @@ aside {
 }
 
 footer {
-    flex: 1 1 100vw;
     height: 100px;
+    flex: 1 1 100vw;
 }
 
 a {
@@ -79,19 +83,10 @@ a {
     color: #fffafa;
 }
 
-@media only screen and (max-width: 923px) {
-    main {
-        height: calc(100vh - 330px);
-    }
-
-    aside {
-        flex: 1 1 100vw;
-        height: 100px;
-    }
-}
-
 @media only screen and (max-width: 717px) {
-    #openMenu, #closeMenu {
+
+    #openMenu,
+    #closeMenu {
         display: block;
     }
 
@@ -107,15 +102,27 @@ a {
 
     nav {
         position: fixed;
-        flex-direction: column;
         width: 100vw;
         height: 100vh;
         background: rgba(18, 10, 143, 0.8);
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0;
         display: none;
         opacity: 0;
-        transition: 0.3;
+        transition: 0.3s;
+    }
+
+    nav a {
+        margin: 3%;
+    }
+
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        height: 100px;
     }
 }
