@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;
+}
+
+header {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #4169e1;
+    color: #fffafa;
+}
+
+nav {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #4169e1;
+    color: #fffafa;
+}
+
+main {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #4169e1;
+    color: #fffafa;
+}
+
+aside {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #4169e1;
+    color: #fffafa;
+}
+
+footer {
+    display: flex;
+    margin: 3px;
+    flex: 1 1 100vw;
+    background: #4169e1;
+    color: #fffafa;
+}
